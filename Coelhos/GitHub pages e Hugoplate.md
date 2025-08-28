@@ -6,6 +6,7 @@
 O **GitHub Pages** é basicamente um servidor grátis do GitHub.  
 Você coloca os arquivos do seu site lá (HTML, CSS, JS) e ele fica online sem você pagar nada.  
 
+
   Só vale pra **site estático** (não pode PHP, banco de dados ou Node).  
 É perfeito para as documentações que faremos
 
