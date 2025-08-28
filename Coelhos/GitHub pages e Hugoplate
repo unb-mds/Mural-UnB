@@ -9,7 +9,7 @@ Você coloca os arquivos do seu site lá (HTML, CSS, JS) e ele fica online sem v
   Só vale pra **site estático** (não pode PHP, banco de dados ou Node).  
 É perfeito para as documentações que faremos
 
----
+
 
 ### Exemplo rápido:
 - Criei um repositório no GitHub chamado `pages`
@@ -34,59 +34,58 @@ Tem diversos temas prontos que você pode encontrar aqui [Hugo Themes](https://t
 
 ## Como criar um site com Hugo + GitHub pages
 
-```bash
+bash
 sudo apt install hugo
-```
-Ver se deu certo:
-```bash
-hugo version
-```
 
----
+Ver se deu certo:
+bash
+hugo version
+
+
 
 ### Criar o projeto
-```bash
+bash
 hugo new site meu-site
 cd meu-site
-```
+
 
 ---
 
 ### Escolher um tema
-```bash
+bash
 git init
 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke themes/ananke (exemplo de tema)
-```
+
 
 Configura no `hugo.toml`:
-```toml
+toml
 theme = "ananke"
-```
+
 
 ---
 
 ### Criar um post
-```bash
+bash
 hugo new posts/primeiro-post.md
-```
+
 
 Vai em `content/posts/primeiro-post.md` e troca `draft = true` pra `draft = false`.
 
 ---
 
 ### Testar no navegador
-```bash
+bash
 hugo server -D
-```
+
 
 Acesse: [http://localhost:1313](http://localhost:1313)
 
 ---
 
 ### Gerar o site final
-```bash
+bash
 hugo
-```
+
 
 Ele vai criar a pasta `public/` com os arquivos prontos pra publicar.
 
@@ -98,14 +97,14 @@ Ele vai criar a pasta `public/` com os arquivos prontos pra publicar.
 1. Cria um repo no GitHub
 2. Vai na pasta `public/`
 3. Faz o push:
-   ```bash
+   bash
    git init
    git remote add origin https://github.com/seuusuario/meu-site.git
    git checkout -b gh-pages
    git add .
    git commit -m "deploy"
    git push origin gh-pages --force
-   ```
+   
 4. No GitHub → **Settings → Pages** → escolhe o branch `gh-pages`.
 
 
