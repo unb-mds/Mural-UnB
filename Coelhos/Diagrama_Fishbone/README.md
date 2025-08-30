@@ -1,13 +1,12 @@
-# Diagrama Espinha-de-Peixe (Ishikawa)
+# 🐟 Diagrama Espinha-de-Peixe (Ishikawa)
 
 O **Diagrama Espinha-de-Peixe**, também chamado de **Diagrama de Ishikawa**, é uma ferramenta visual usada para **solução de problemas** e **análise de causas**. Ele é estruturado como o esqueleto de um peixe: o **problema** é posicionado na "cabeça" do peixe e as **potenciais causas** derivam da cabeça como **"espinhas"**.
 
 Essas espinhas representam diversas categorias como **processos**, **materiais**, **medidas**, **pessoas**, **métodos**, etc. Organizar as causas dessa forma ajuda na identificação da **raiz** do problema discutido.
 
 A seguir, veja como o diagrama é estruturado:
-
-> **Exemplo de Diagrama Espinha-de-Peixe**  
-> (Inserir exemplo aqui)
+  
+> <img src="./Fishbone-diagram.png" width="550" align="center" style="margin-right: 20px">
 
 ---
 
@@ -25,7 +24,7 @@ A seguir, veja como o diagrama é estruturado:
 
 ---
 
-## COMO MONTAR UM DIAGRAMA ESPINHA-DE-PEIXE
+## 🔧 COMO MONTAR UM DIAGRAMA ESPINHA-DE-PEIXE
 
 1. **Defina o problema** que precisa ser analisado.
 2. **Determine as categorias** que podem contribuir para o problema.
@@ -45,5 +44,6 @@ A seguir, veja como o diagrama é estruturado:
 ---
 
 O Diagrama Espinha-de-Peixe é uma excelente ferramenta para **identificar e analisar** as causas de problemas, permitindo que equipes colaborem de forma mais estruturada e eficiente.
+
 
 
