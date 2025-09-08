@@ -16,6 +16,5 @@ O **Scikit-Learn** é uma biblioteca de Machine Learning em Python, focada em:
 - [Regressão](./Regressao/README.md)  
 - [Clustering](./Clustering/README.md)  
 - [Validação de Modelos](./Validacao/README.md)  
-- [Exemplo de Modelo de recomendação](./Recomendcao/README.md)
 
 Cada seção contém um guia explicativo e exemplos práticos.
