@@ -227,3 +227,97 @@ admin.site.register(Question)
 if user.has_perm("polls.add_choice"):
     # Usuário pode adicionar uma escolha
 ```
+
+# 🚀 Guia Rápido Django
+
+## 📌 Criação de Projeto Django (Getting Started)
+
+1. Verifique se Django está instalado e sua versão:
+   ```bash
+   python -m django --version
+   ```
+
+2. Crie um novo projeto:
+   ```bash
+   django-admin startproject mysite djangotutorial
+   ```
+
+3. Estrutura gerada:
+   ```
+   djangotutorial/
+     └── mysite/
+         ├── manage.py
+         └── mysite/
+             ├── settings.py
+             ├── urls.py
+             ├── asgi.py
+             └── wsgi.py
+   ```
+
+- **Projeto**: contém configurações (como banco, URLs, apps instalados).  
+- **App**: é uma parte funcional (como um sistema de blog ou enquete). Um projeto pode ter vários apps.  
+
+---
+
+##  O que é Django REST Framework (DRF)
+
+O **Django REST Framework (DRF)** é uma biblioteca poderosa, construída sobre o Django, que facilita a criação de **APIs RESTful completas**.
+
+###  Funcionalidades principais
+- **Serializers**: convertem objetos Django (models) em JSON (ou outros formatos) e vice-versa.  
+  - `ModelSerializer` automatiza o processo com base nos models.  
+- **ViewSets**: classes que agrupam múltiplas ações (list, retrieve, create, update, delete).  
+- **Routers**: geram automaticamente as rotas para os ViewSets.  
+- **API navegável**: interface web para testar endpoints de forma interativa.  
+- **Recursos extras**: autenticação, permissões, paginação e documentação integrada.  
+
+###  Em resumo
+O DRF torna rápido e modular:
+- Transformar **models em JSON**  
+- Criar endpoints **CRUD** via ViewSets  
+- Gerar **URLs automáticas** com routers  
+- Adicionar **autenticação, permissões e paginação** sem esforço adicional  
+
+---
+
+##  Deploy de Aplicações Django — Checklist Essencial
+
+###  Use os comandos apropriados
+-  Não use `manage.py runserver` em produção (apenas para desenvolvimento).  
+-  Use servidores **WSGI** (Gunicorn) ou **ASGI** (para apps assíncronos).  
+-  Execute:
+  ```bash
+  python manage.py check --deploy
+  ```
+  para validar configurações de produção.  
+
+---
+
+###  Configurações críticas de segurança
+- **SECRET_KEY**: nunca faça commit; use variáveis de ambiente.  
+- **DEBUG**: sempre `False` em produção.  
+- **ALLOWED_HOSTS**: defina domínios explícitos (não use `*`).  
+- **Arquivos estáticos e mídia**:
+  - Configure `STATIC_ROOT` e rode `collectstatic`.  
+  - Defina `MEDIA_ROOT` e trate uploads de forma segura.  
+- **HTTPS**:
+  - Configure TLS no servidor (ex.: Nginx, Cloudflare).  
+  - Redirecione todo o tráfego para HTTPS.  
+
+---
+
+###  Performance e caching
+- Ative **cache persistente** (Redis, Memcached).  
+- Configure `CONN_MAX_AGE` para conexões persistentes com DB.  
+- Use **cached template loader** (`DEBUG = False`).  
+- Sirva arquivos estáticos via **CDN** para otimizar carregamento global.  
+
+---
+
+###  Monitoramento e relatórios de erros
+- Configure **logging** para erros e eventos relevantes.  
+- Envie e-mails de erro 500 para `ADMINS` e 404 para `MANAGERS`.  
+- Integre com ferramentas como **Sentry** para rastreamento.  
+- Personalize páginas de erro (`404.html`, `500.html`, etc.).  
+
+---
