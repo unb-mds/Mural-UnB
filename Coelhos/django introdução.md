@@ -5,6 +5,56 @@ O “controller” do MVC, no Django, é o próprio **framework**, que recebe a 
 
 ---
 
+### Configuração inicial e boas práticas de organização
+
+# Criar ambiente virtual
+```bash
+python3 -m venv .venv
+```
+# Ativar ambiente virtual
+# Linux/Mac
+```bash
+source .venv/bin/activate
+# Windows
+.venv\Scripts\activate
+```
+# Instalar Django dentro do ambiente
+```bash
+python3 -m pip install Django
+```
+# Verificar versão instalada
+```bash
+python3 -m django --version
+```
+# Criação de app 
+```bash
+python manage.py startapp nome_app
+```
+# Boas práticas
+# 1. Usar .env para credenciais e configs sensíveis
+# 2. Manter requirements.txt atualizado
+pip freeze > requirements.txt; lista tudo que tá instalado no teu ambiente virtual (Django, libs extras, etc.) e salva dentro desse arquivo.
+# 3. Criar apps para dividir responsabilidades (ex: users, events, payments)
+# 4. Configurar settings separados (dev, prod) quando o projeto crescer
+# 5. Usar migrations sempre que alterar modelos
+São scripts automáticos que o Django gera pra manter o banco de dados sincronizado com os seus modelos (models.py).
+python manage.py makemigrations, Roda-o;
+python manage.py migrate, aplica no banco
+# Exemplo prático
+```bash
+class Cliente(models.Model):
+    nome = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+```
+# Resumo: migrations = ponte entre o código Python (models) e o banco de dados real.
+# 6. Criar superusuário para acessar o admin
+```bash
+python manage.py createsuperuser
+```
+# 7. Testar o projeto antes de subir alterações
+```bash
+python manage.py test
+```
 ## Models e ORM (Banco de Dados com SQLite)
 
 ### Banco de Dados com SQLite
@@ -228,94 +278,120 @@ if user.has_perm("polls.add_choice"):
     # Usuário pode adicionar uma escolha
 ```
 
-##  Criação de Projeto Django (Getting Started)
+### Criação de APIs com Django REST Framework (DRF)
 
-1. Verifique se Django está instalado e sua versão:
-   ```bash
-   python -m django --version
-   ```
+## Instalação
+```bash
+pip install djangorestframework
+```
+# No settings.py, adicione em INSTALLED_APPS:
+```bash
+INSTALLED_APPS = [
+    ...
+    "rest_framework",
+]
+```
+# Serializers
+Transformam models em JSON (e vice-versa).
+# Exemplo Prático
+```bash
+from rest_framework import serializers
+from .models import Question
 
-2. Crie um novo projeto:
-   ```bash
-   django-admin startproject mysite djangotutorial
-   ```
+class QuestionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Question
+        fields = ["id", "question_text", "pub_date"]
+```
+# Views para API
+DRF oferece ViewSets e APIView para lidar com requisições.
+# Exemplo usando ModelViewSet:
+```bash
+from rest_framework import viewsets
+from .models import Question
+from .serializers import QuestionSerializer
 
-3. Estrutura gerada:
-   ```
-   djangotutorial/
-     └── mysite/
-         ├── manage.py
-         └── mysite/
-             ├── settings.py
-             ├── urls.py
-             ├── asgi.py
-             └── wsgi.py
-   ```
+class QuestionViewSet(viewsets.ModelViewSet):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
+```
+# URLs com DRF Router
+DRF tem routers que criam rotas automaticamente.
+# Exemplo simples
+```bash
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import QuestionViewSet
 
-- **Projeto**: contém configurações (como banco, URLs, apps instalados).  
-- **App**: é uma parte funcional (como um sistema de blog ou enquete). Um projeto pode ter vários apps.  
+router = DefaultRouter()
+router.register(r"questions", QuestionViewSet)
 
----
+urlpatterns = [
+    path("api/", include(router.urls)),
+]
+```
+# Testando a API
+```bash
+python manage.py runserver
+```
+# Navegador
+http://127.0.0.1:8000/api/questions/
 
-##  O que é Django REST Framework (DRF)
 
-O **Django REST Framework (DRF)** é uma biblioteca poderosa, construída sobre o Django, que facilita a criação de **APIs RESTful completas**.
+### Deploy de aplicações Django
 
-###  Funcionalidades principais
-- **Serializers**: convertem objetos Django (models) em JSON (ou outros formatos) e vice-versa.  
-  - `ModelSerializer` automatiza o processo com base nos models.  
-- **ViewSets**: classes que agrupam múltiplas ações (list, retrieve, create, update, delete).  
-- **Routers**: geram automaticamente as rotas para os ViewSets.  
-- **API navegável**: interface web para testar endpoints de forma interativa.  
-- **Recursos extras**: autenticação, permissões, paginação e documentação integrada.  
+# Preparar o ambiente
+```bash
+pip install -r requirements.txt
+```
+# Configurar banco de dados
+Settings.py:
+```bash
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
+```
+O banco é só o arquivo .sqlite3 que fica junto do projeto
 
-###  Em resumo
-O DRF torna rápido e modular:
-- Transformar **models em JSON**  
-- Criar endpoints **CRUD** via ViewSets  
-- Gerar **URLs automáticas** com routers  
-- Adicionar **autenticação, permissões e paginação** sem esforço adicional  
+# Configurar variáveis do ambiente
+Nunca deixar segredos (como SECRET_KEY) no código.
+Usar .env ou variáveis no servidor:
+```bash
+import os
 
----
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
+```
+# Servidor WSGI/ASGI
+O Django não deve rodar com runserver em produção.
+Usar:
 
-##  Deploy de Aplicações Django — Checklist Essencial
+Gunicorn (mais comum).
 
-###  Use os comandos apropriados
--  Não use `manage.py runserver` em produção (apenas para desenvolvimento).  
--  Use servidores **WSGI** (Gunicorn) ou **ASGI** (para apps assíncronos).  
--  Execute:
-  ```bash
-  python manage.py check --deploy
-  ```
-  para validar configurações de produção.  
+Uvicorn (se quiser suporte assíncrono).
 
----
+gunicorn projeto.wsgi
 
-###  Configurações críticas de segurança
-- **SECRET_KEY**: nunca faça commit; use variáveis de ambiente.  
-- **DEBUG**: sempre `False` em produção.  
-- **ALLOWED_HOSTS**: defina domínios explícitos (não use `*`).  
-- **Arquivos estáticos e mídia**:
-  - Configure `STATIC_ROOT` e rode `collectstatic`.  
-  - Defina `MEDIA_ROOT` e trate uploads de forma segura.  
-- **HTTPS**:
-  - Configure TLS no servidor (ex.: Nginx, Cloudflare).  
-  - Redirecione todo o tráfego para HTTPS.  
+# Servidor Web
 
----
+Usar Nginx ou Apache para:
 
-###  Performance e caching
-- Ative **cache persistente** (Redis, Memcached).  
-- Configure `CONN_MAX_AGE` para conexões persistentes com DB.  
-- Use **cached template loader** (`DEBUG = False`).  
-- Sirva arquivos estáticos via **CDN** para otimizar carregamento global.  
+Redirecionar tráfego HTTP/HTTPS.
 
----
+Servir arquivos estáticos (CSS, JS, imagens).
 
-###  Monitoramento e relatórios de erros
-- Configure **logging** para erros e eventos relevantes.  
-- Envie e-mails de erro 500 para `ADMINS` e 404 para `MANAGERS`.  
-- Integre com ferramentas como **Sentry** para rastreamento.  
-- Personalize páginas de erro (`404.html`, `500.html`, etc.).  
+# Arquivo estáticos e mídia
+```bash python manage.py collectstatic 
+```
+Isso junta todos os arquivos estáticos num só diretório, para o Nginx servir.
 
----
+# Deploy em serviços gerenciados
+Se não quiser configurar tudo manualmente:
+
+Heroku, Railway, Render, PythonAnywhere → todos suportam SQLite.
+
+Docker também pode ser usado para empacotar o projeto.
+
