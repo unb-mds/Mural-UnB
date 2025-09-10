@@ -228,9 +228,7 @@ if user.has_perm("polls.add_choice"):
     # Usuário pode adicionar uma escolha
 ```
 
-# 🚀 Guia Rápido Django
-
-## 📌 Criação de Projeto Django (Getting Started)
+##  Criação de Projeto Django (Getting Started)
 
 1. Verifique se Django está instalado e sua versão:
    ```bash
