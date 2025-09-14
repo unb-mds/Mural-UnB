@@ -16,7 +16,10 @@
 
 > Deve retornar a versão instalada mais recente, caso retorne um erro, no Linux rode o comando a baixo. No Windows, baixe o node.js no [site oficial](https://nodejs.org/en/download/)
 
-```bash $ curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - $ sudo apt-get install -y nodejs```
+```
+$ curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - 
+$ sudo apt-get install -y nodejs
+```
 
 - Com o node.js instalado corretamente, abra o git bash ou o terminal e digite o comando:
 `$ npm install -g typescript`
@@ -49,31 +52,49 @@
 
 #### **4.** Null e Unidentified
 
-```typescript let vazio: null = null; let indefinido: unidentified = unidentified;```
+```
+let vazio: null = null;
+let indefinido: unidentified = unidentified;
+```
 
 #### **5.** Any - Aceita qualquer tipo
 
-```typescript let dado: any = "texto"; dado = 10; \\válido```
+```
+let dado: any = "texto";
+dado = 10; \\válido
+```
 
 #### **6.** Unknown - Similar ao any mas requer checagem de tipo antes de usar
 
-```typescript let valor: unknown = "texto"; if(typeof valor == "string") {console.log(valor.toUpperCase());}```
+```
+let valor: unknown = "texto"; 
+if(typeof valor == "string") {
+    console.log(valor.toUpperCase());
+}
+```
 
 #### **7.** Void - Usado em funções que não retornam valor
 
-```typescript function: logar(): void {console.log("Executando...")};```
+```
+function: logar(): void {
+    console.log("Executando...")
+};
+```
 
 #### **8.** Object - Qualquer objeto não primitivo
 
-```typescript let pessoa: object = { nome: "Ana", idade: 22 };```
+`let pessoa: object = { nome: "Ana", idade: 22 };`
 
 #### **9.** Never - Funções que nunca retornam (lançam erro ou loop infinito)
 
-```typescript function erro(msg: string): never {throw new Error(msg);}```
+`function erro(msg: string): never {throw new Error(msg);}`
 
 #### **10.** Array
 
-```typescript let numeros: number[] = [1, 2, 3];  let nomes: Array<string> = ["Ana", "João"];```
+```
+let numeros: number[] = [1, 2, 3];
+let nomes: Array<string> = ["Ana", "João"];
+```
 
 #### **11.** Tupla - Array com tamanho e tipos fixos
 
@@ -126,3 +147,4 @@
 ### 11. Utility types – utilitários prontos do TypeScript
 
 ```typescript interface Pessoa {nome: string; idade: number; email?: string} let p1: Partial<Pessoa> = { nome: "Lucas" };       // todos opcionais let p2: Required<Pessoa> = { nome: "Ana", idade: 20, email: "a@b.com" }; // todos obrigatórios  let p3: Readonly<Pessoa> = { nome: "Marcos", idade: 30 }; // somente leitura  let p4: Pick<Pessoa, "nome"> = { nome: "Sofia" };  // pega apenas "nome"  let p5: Omit<Pessoa, "email"> = { nome: "Leo", idade: 22 }; // remove "email"```
+
