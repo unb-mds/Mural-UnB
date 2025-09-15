@@ -1,6 +1,6 @@
 # Estudo de Typescript aplicado a React
 
-    Este documento tem o objetivo de fornecer as anotações sobre o uso do TypeScript ou Tsx aplicado á web utilizando React como framework.
+Este documento tem o objetivo de fornecer as anotações sobre o uso do TypeScript ou Tsx aplicado á web utilizando React como framework.
 
 ## Pre-requisitos
 
@@ -34,7 +34,7 @@ sudo apt-get install -y nodejs
 
 ## Configuração do tsconfig.json para React
 
-    Para projetos React com TypeScript, o `tsconfig.json` define como o compilador interpreta seu código. Um exemplo básico de configuração:
+Para projetos React com TypeScript, o `tsconfig.json` define como o compilador interpreta seu código. Um exemplo básico de configuração:
 
 ```json
 {
@@ -63,8 +63,8 @@ sudo apt-get install -y nodejs
 
 ## Integração com Bibliotecas e APIs Externas
 
-    Em aplicações React modernas, é comum precisar integrar bibliotecas externas (como Axios, Lodash, Moment.js) ou consumir APIs externas (REST ou GraphQL).  
-    O TypeScript ajuda garantindo tipos corretos para dados e funções, evitando erros e facilitando o autocompletar.
+Em aplicações React modernas, é comum precisar integrar bibliotecas externas (como Axios, Lodash, Moment.js) ou consumir APIs externas (REST ou GraphQL).  
+O TypeScript ajuda garantindo tipos corretos para dados e funções, evitando erros e facilitando o autocompletar.
 
 ### 🔹 Integração com Bibliotecas Externas
 
@@ -362,12 +362,12 @@ let p5: Omit<Pessoa, "email"> = { nome: "Leo", idade: 22 }; // remove "email"
 
 ## Tipagem de props e estados em React com Tsx
 
-    No React com TypeScript, tipar props e estados é essencial para garantir que os componentes recebam e manipulem os dados corretos, evitando erros em tempo de compilação.
+No React com TypeScript, tipar props e estados é essencial para garantir que os componentes recebam e manipulem os dados corretos, evitando erros em tempo de compilação.
 
 ### 🔹 Tipagem de Props
 
-    Props são propriedades que um componente recebe de outro componente pai.  
-    A tipagem das props define quais dados e tipos são esperados, permitindo autocompletar e checar tipos.
+Props são propriedades que um componente recebe de outro componente pai.  
+A tipagem das props define quais dados e tipos são esperados, permitindo autocompletar e checar tipos.
 
 #### 1. Usando `type`
 
@@ -423,8 +423,8 @@ function Layout({ children }: LayoutProps) {
 
 ### 🔹 Tipagem de Estado `useState`
 
-    O estado é um dado interno do componente que pode mudar ao longo do tempo.
-    Tipar o estado garante que você atribua valores compatíveis.
+O estado é um dado interno do componente que pode mudar ao longo do tempo.
+Tipar o estado garante que você atribua valores compatíveis.
 
 #### 1. Estado Simples
 
@@ -513,7 +513,7 @@ function Lista() {
 
 ### 🔹 Funções
 
-No tsx, as funções funcionam na mesma maneira que no Javascript porém permite a tipagem da entrada e do returno da função.
+No tsx, as funções funcionam da mesma maneira que no Javascript porém permite a tipagem da entrada e do returno da função.
 
 #### 1. Declaração de função com tipagem
 
@@ -647,7 +647,8 @@ let caixaTexto = new Caixa<string>("Genérico");
 
 ## Hooks com TypeScript
 
-Hooks são funções especiais do React que permitem usar o estado e outros recursos em componentes funcionais sem a necessidade de criar classes específicas. O Typescript permite a tipagem de estados, funções e contextos nos hooks.
+Hooks são funções especiais do React que permitem usar o estado e outros recursos em componentes funcionais sem a necessidade de criar classes específicas. 
+O Typescript permite a tipagem de estados, funções e contextos nos hooks.
 
 ### 🔹 useState
 
@@ -750,7 +751,7 @@ function Relogio() {
 
 ### 🔹 useContext
 
-    O `useContext` permite compartilhar estado global sem precisar passar props manualmente.
+O `useContext` permite compartilhar estado global sem precisar passar props manualmente.
 
 ```tsx
 import { createContext, useContext, useState } from "react";
@@ -827,7 +828,7 @@ function ContadorReducer() {
 
 ### 🔹 Custom Hooks
 
-    Custom hooks permitem extrair lógica reutilizável em funções próprias. A seguir segue um exemplo de hook para armazenar estado no `localStorage`.
+Custom hooks permitem extrair lógica reutilizável em funções próprias. A seguir segue um exemplo de hook para armazenar estado no `localStorage`.
 
 ```tsx
 import { useState, useEffect } from "react";
@@ -861,15 +862,15 @@ function App() {
 
 ## Tratamento de Eventos e Tipos de JSX
 
-    No React, os eventos são usados para interagir com os elementos da interface, como cliques, mudanças de input, submissão de formulários, etc.  
-    No TypeScript, podemos tipar esses eventos para garantir maior segurança e evitar erros em tempo de compilação.
+No React, os eventos são usados para interagir com os elementos da interface, como cliques, mudanças de input, submissão de formulários, etc.  
+No TypeScript, podemos tipar esses eventos para garantir maior segurança e evitar erros em tempo de compilação.
 
 ### 🔹 Tratamento de Eventos
 
 #### 1. Tipos básicos de eventos
 
-    O TypeScript oferece tipos específicos para cada tipo de evento no React, disponíveis no namespace `React`.  
-    Alguns exemplos:
+O TypeScript oferece tipos específicos para cada tipo de evento no React, disponíveis no namespace `React`.  
+Alguns exemplos:
 
 | Evento                    | Tipo                         |
 |----------------------------|-----------------------------|
@@ -939,7 +940,7 @@ function Formulario() {
 
 ### 🔹 Tipos de JSX
 
-    Em TypeScript, podemos tipar elementos JSX e funções que retornam JSX.
+Em TypeScript, podemos tipar elementos JSX e funções que retornam JSX.
 
 #### 1. Função que retorna JSX
 
@@ -981,5 +982,3 @@ function App() {
   );
 }
 ```
-
----
