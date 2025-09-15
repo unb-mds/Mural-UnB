@@ -205,7 +205,7 @@ function ListaProdutos() {
 
 ### 🔹 Tipos básicos
 
-    A seguir, segue os tipos mais comuns, utilizados no dia a dia
+A seguir, segue os tipos mais comuns, utilizados no dia a dia
 
 #### 1. `String` - Textos
 
@@ -982,3 +982,4 @@ function App() {
   );
 }
 ```
+
