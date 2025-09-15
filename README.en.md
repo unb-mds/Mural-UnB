@@ -1,47 +1,52 @@
-<a id="readme-top"></a> 
+<a id="readme-top"></a>
 
-<!-- ESCUDOS DO PROJETO -->
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 <p align="center">
   <a href="https://github.com/unb-mds/Mural-UnB/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Contribuidores" />
+    <img src="https://img.shields.io/github/contributors/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Contributors" />
   </a>
   <a href="https://github.com/unb-mds/Mural-UnB/network/members">
     <img src="https://img.shields.io/github/forks/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Forks" />
   </a>
   <a href="https://github.com/unb-mds/Mural-UnB/stargazers">
-    <img src="https://img.shields.io/github/stars/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Stars" />
+    <img src="https://img.shields.io/github/stars/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Stargazers" />
   </a>
   <a href="https://github.com/unb-mds/Mural-UnB/issues">
     <img src="https://img.shields.io/github/issues/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Issues" />
   </a>
   <a href="https://github.com/unb-mds/Mural-UnB/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Licença" />
+    <img src="https://img.shields.io/github/license/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="License" />
   </a>
   <a href="mailto:____@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
   </a>
 </p>
 
-
-
 <h1 align="center">
   <br>
-  <a href="#"><img src="./assets-readme/main_logo.png" alt="Mural UnB" width="300"></a>
+  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="./assets-readme/main_logo.png" alt="Markdownify" width="300"></a>
 </h1>
 
 <p align="center"> 
   🌎 Languages: <a href="./README.en.md">English</a> | <a href="./README.md">Português</a>
-</p>
+</p> 
 
-<h3 align="center">Plataforma de mural digital da Universidade de Brasília (UnB)</h3>
-
-<!-- 
+<h3 align="center">Digital bulletin board platform for the University of Brasília (UnB)</h3>
+<!--
 <p align="center">
   <a>
-    <img src="https://badge.fury.io/js/mural-unb.svg" alt="Versão npm">
+    <img src="https://badge.fury.io/js/mural-unb.svg" alt="npm version">
   </a>
   <a>
-    <img src="https://badge.fury.io/py/pip.svg" alt="Versão PyPi">
+    <img src="https://badge.fury.io/py/pip.svg">
   </a>
   <a>
     <img src="https://img.shields.io/badge/docker%20engine-28.4-blue" alt="Docker">
@@ -49,43 +54,46 @@
 </p>
 -->
 
+
 <p align="center">
-  <a href="#sobre">Sobre</a> •
-  <a href="#principais-funcionalidades">Funcionalidades</a> •
-  <a href="#como-usar">Como Usar</a> •
-  <a href="#🙋‍♂️-equipe">Equipe</a> •
-  <a href="#🧾-licença">Licença</a> •
-  <a href="#🤝-contribuição">Contribuição</a> •
-  <a href="#📜-código-de-conduta">Código de Conduta</a>
+  <a href="#about">About</a> •
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#how-to-contribuite">Contribuite</a> •
+  <a href="#🙋‍♂️-team">Team</a> •
+  <a href="#🧾-license">License</a> •
+  <a href="#🤝-contributing">Contributing</a> •
+  <a href="#📜-code-of-conduct">Code of Conduct</a>
 </p>
 
 ## Demo
 
-#### 🚧 Em desenvolvimento
+#### 🚧 In development
 
-## Sobre
+## About
 
-O **Mural UnB** é uma plataforma digital projetada para centralizar e recomendar oportunidades acadêmicas e profissionais dentro da Universidade de Brasília (UnB).  
+**Mural UnB** is a digital platform designed to centralize and recommend academic and professional opportunities within the University of Brasília (UnB).  
 
-O objetivo é criar uma **experiência personalizada**, onde os estudantes possam facilmente descobrir oportunidades alinhadas aos seus interesses e histórico acadêmico.  
-Ao analisar o perfil do usuário, a plataforma recomenda as opções mais relevantes e envia notificações sobre novas vagas.  
+The goal is to create a **personalized experience** where students can easily discover opportunities aligned with their interests and academic background. By analyzing user profiles, the platform recommends the most relevant options and sends notifications about new openings.  
 
-Inclui oportunidades como:  
-- **Empresas juniores**  
-- **Laboratórios de pesquisa**  
-- **Iniciação científica (PIBICs)**  
+This includes opportunities in:  
+- **Junior Enterprises**  
+- **Research Laboratory**  
+- **Scientific initiation (PIBICs)**    
 
-Em resumo, o Mural UnB funciona como um **mural virtual**, que vai além de apenas listar oportunidades — ele **ajuda os estudantes a se conectarem com as oportunidades certas, no momento certo**.  
+In short, Mural UnB acts as a **virtual bulletin board** that goes beyond simply listing opportunities, it **helps students connect with the right ones at the right time**.
 
-## Principais Funcionalidades
 
-#### 🚧 Em desenvolvimento
+## Key Features
 
-## Como Usar
+#### 🚧 In development
 
-#### 🚧 Em desenvolvimento
+## How To Use
 
-## 🙋‍♂️ Equipe
+#### 🚧 In development
+
+
+## 🙋‍♂️ Team
 
 <table>
   <tr>
@@ -134,19 +142,19 @@ Em resumo, o Mural UnB funciona como um **mural virtual**, que vai além de apen
   </tr>
 </table>
 
-## 🧾 Licença
+## 🧾 License
 
 [MIT](./LICENSE)
 
-## 🤝 Contribuição
+## 🤝 Contributing
 
-Contribuições da comunidade são muito bem-vindas! 🎉  
-Veja nosso [CONTRIBUTING.md](./.github/CONTRIBUTING.md) para saber como começar.
+We welcome contributions from the community! 🎉  
+Please read our [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for guidelines on how to get started.
 
-## 📜 Código de Conduta
+## 📜 Code of Conduct
 
-Este projeto segue um **Código de Conduta** para garantir um ambiente acolhedor.  
-Assim que disponível, você pode acessá-lo aqui: [CODE_OF_CONDUCT.md](./.github/CODE_OF_CONDUCT.md).
+This project follows a **Code of Conduct** to ensure a welcoming environment.  
+Once available, you can read it here: [CODE_OF_CONDUCT.md](./.github/CODE_OF_CONDUCT.md).
 
 ---
 
