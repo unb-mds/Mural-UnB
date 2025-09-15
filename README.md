@@ -9,13 +9,26 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![Gmail][gmail-shield]][gmail-url]
-
+<p align="center">
+  <a href="https://github.com/unb-mds/Mural-UnB/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Contributors" />
+  </a>
+  <a href="https://github.com/unb-mds/Mural-UnB/network/members">
+    <img src="https://img.shields.io/github/forks/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Forks" />
+  </a>
+  <a href="https://github.com/unb-mds/Mural-UnB/stargazers">
+    <img src="https://img.shields.io/github/stars/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Stargazers" />
+  </a>
+  <a href="https://github.com/unb-mds/Mural-UnB/issues">
+    <img src="https://img.shields.io/github/issues/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="Issues" />
+  </a>
+  <a href="https://github.com/unb-mds/Mural-UnB/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/unb-mds/Mural-UnB.svg?style=for-the-badge" alt="License" />
+  </a>
+  <a href="mailto:____@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
+  </a>
+</p>
 
 <h1 align="center">
   <br>
@@ -23,7 +36,7 @@
 </h1>
 
 
-<h4 align="center">Aplicativo de mural digital para a Universidade de Brasília (UnB).</h4>
+<h4 align="center">Aplicativo de mural digital para a Universidade de Brasília (UnB)</h4>
 <p align="center">
   <a>
     <img src="https://badge.fury.io/js/mural-unb.svg" alt="npm version">
@@ -38,17 +51,33 @@
 
 
 <p align="center">
+  <a href="#about">About</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#how-to-contribuite">Contribuite</a> •
-  <a href="#credits">Credits</a> •
   <a href="#🙋‍♂️-team">Team</a> •
-  <a href="#🧾-license">License</a>
+  <a href="#🧾-license">License</a> •
+    <a href="#🤝-contributing">Contributing</a> •
+  <a href="#📜-code-of-conduct">Code of Conduct</a>
 </p>
 
 ## Demo
 
 #### 🚧 In development
+
+## About
+
+**Mural UnB** is a digital platform designed to centralize and recommend academic and professional opportunities within the University of Brasília (UnB).  
+
+The goal is to create a **personalized experience** where students can easily discover opportunities aligned with their interests and academic background. By analyzing user profiles, the platform recommends the most relevant options and sends notifications about new openings.  
+
+This includes opportunities such as:  
+- **Research positions (PIBICs)**  
+- **Laboratory openings**  
+- **Junior enterprise projects**  
+
+In short, Mural UnB acts as a **virtual bulletin board** that goes beyond simply listing opportunities, it **helps students connect with the right ones at the right time**.
+
 
 ## Key Features
 
@@ -58,9 +87,6 @@
 
 #### 🚧 In development
 
-## How To Contribuite
-
-#### 🚧 In development
 
 ## 🙋‍♂️ Team
 
@@ -71,7 +97,7 @@
         <img src="https://github.com/TiagoSBittencourt.png" width="100px;" alt="Tiago Bittencourt"/>
         <br /><sub><b>Tiago Bittencourt</b></sub>
       </a>
-      <br /><span>SM • Backend & Integration</span>
+      <br /><span>SM • ML & Agent Developer</span>
     </td>
     <td align="center">
       <a href="https://github.com/Karmantinedev">
@@ -115,29 +141,19 @@
 
 [MIT](./LICENSE)
 
+## 🤝 Contributing
+
+We welcome contributions from the community! 🎉  
+Please read our [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for guidelines on how to get started.
+
+## 📜 Code of Conduct
+
+This project follows a **Code of Conduct** to ensure a welcoming environment.  
+Once available, you can read it here: [CODE_OF_CONDUCT.md](./.github/CODE_OF_CONDUCT.md).
+
 ---
 
 > Site [______.com]() &nbsp;&middot;&nbsp;
 > GitHub [Mural-UnB](https://github.com/unb-mds/Mural-UnB) &nbsp;&middot;&nbsp;
 > Instagram [@______]() &nbsp;&middot;&nbsp;
 > email [___@gmail.com]()
-
-
-<!-- SHIELDS REFERENCE -->
-[contributors-shield]: https://img.shields.io/github/contributors/unb-mds/Mural-UnB.svg?style=for-the-badge
-[contributors-url]: https://github.com/unb-mds/Mural-UnB/graphs/contributors
-
-[forks-shield]: https://img.shields.io/github/forks/unb-mds/Mural-UnB.svg?style=for-the-badge
-[forks-url]: https://github.com/unb-mds/Mural-UnB/network/members
-
-[stars-shield]: https://img.shields.io/github/stars/unb-mds/Mural-UnB.svg?style=for-the-badge
-[stars-url]: https://github.com/unb-mds/Mural-UnB/stargazers
-
-[issues-shield]: https://img.shields.io/github/issues/unb-mds/Mural-UnB.svg?style=for-the-badge
-[issues-url]: https://github.com/unb-mds/Mural-UnB/issues
-
-[license-shield]: https://img.shields.io/github/license/unb-mds/Mural-UnB.svg?style=for-the-badge
-[license-url]: https://github.com/unb-mds/Mural-UnB/blob/main/LICENSE
-
-[gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
-[gmail-url]: mailto:____@gmail.com
