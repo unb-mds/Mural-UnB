@@ -30,13 +30,22 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://unb-mds.github.io/Mural-UnB/">
+    <img src="https://img.shields.io/badge/GitHub%20Pages-Docs-blue?style=for-the-badge&logo=github" alt="Docs"/>
+  </a>
+  <a href="https://www.figma.com/board/S9uS0BvdNKOcX2gYhVtMDY/Mural-UnB-MDS?node-id=0-1&p=f&t=3mDHHLQPSOljbISN-0">
+    <img src="https://img.shields.io/badge/Figma-Hub-purple?style=for-the-badge&logo=figma" alt="Figma"/>
+  </a>
+</p>
+
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="./assets-readme/main_logo.png" alt="Markdownify" width="300"></a>
+  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="./main_logo.png" alt="Markdownify" width="300"></a>
 </h1>
 
 <p align="center"> 
-  🌎 Languages: <a href="./README.en.md">English</a> | <a href="./README.md">Português</a>
+  🌎 Languages: <a href="./README.en.md">English</a> | <a href="../README.md">Português</a>
 </p> 
 
 <h3 align="center">Digital bulletin board platform for the University of Brasília (UnB)</h3>
@@ -59,6 +68,7 @@
   <a href="#about">About</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
+  <a href="#🔗-links">Links</a> •
   <a href="#how-to-contribuite">Contribuite</a> •
   <a href="#🙋‍♂️-team">Team</a> •
   <a href="#🧾-license">License</a> •
@@ -92,6 +102,10 @@ In short, Mural UnB acts as a **virtual bulletin board** that goes beyond simply
 
 #### 🚧 In development
 
+## 🔗 Links
+- [Demo (GitHub Pages)](https://unb-mds.github.io/Mural-UnB/)  
+- [Figma - Hub do Projeto](https://www.figma.com/board/S9uS0BvdNKOcX2gYhVtMDY/Mural-UnB-MDS?node-id=0-1&p=f&t=3mDHHLQPSOljbISN-0)  
+- [Repositório GitHub](https://github.com/unb-mds/Mural-UnB) 
 
 ## 🙋‍♂️ Team
 

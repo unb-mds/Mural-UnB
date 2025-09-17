@@ -22,15 +22,24 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://unb-mds.github.io/Mural-UnB/">
+    <img src="https://img.shields.io/badge/GitHub%20Pages-Docs-blue?style=for-the-badge&logo=github" alt="Docs"/>
+  </a>
+  <a href="https://www.figma.com/board/S9uS0BvdNKOcX2gYhVtMDY/Mural-UnB-MDS?node-id=0-1&p=f&t=3mDHHLQPSOljbISN-0">
+    <img src="https://img.shields.io/badge/Figma-Hub-purple?style=for-the-badge&logo=figma" alt="Figma"/>
+  </a>
+</p>
+
 
 
 <h1 align="center">
   <br>
-  <a href="#"><img src="./assets-readme/main_logo.png" alt="Mural UnB" width="300"></a>
+  <a href="#"><img src="./readme/main_logo.png" alt="Mural UnB" width="300"></a>
 </h1>
 
 <p align="center"> 
-  🌎 Languages: <a href="./README.en.md">English</a> | <a href="./README.md">Português</a>
+  🌎 Languages: <a href="./readme/README.en.md">English</a> | <a href="./README.md">Português</a>
 </p>
 
 <h3 align="center">Plataforma de mural digital da Universidade de Brasília (UnB)</h3>
@@ -53,6 +62,7 @@
   <a href="#sobre">Sobre</a> •
   <a href="#principais-funcionalidades">Funcionalidades</a> •
   <a href="#como-usar">Como Usar</a> •
+  <a href="#🔗-links">Links</a> •
   <a href="#🙋‍♂️-equipe">Equipe</a> •
   <a href="#🧾-licença">Licença</a> •
   <a href="#🤝-contribuição">Contribuição</a> •
@@ -84,6 +94,11 @@ Em resumo, o Mural UnB funciona como um **mural virtual**, que vai além de apen
 ## Como Usar
 
 #### 🚧 Em desenvolvimento
+
+## 🔗 Links
+- [Demo (GitHub Pages)](https://unb-mds.github.io/Mural-UnB/)  
+- [Figma - Hub do Projeto](https://www.figma.com/board/S9uS0BvdNKOcX2gYhVtMDY/Mural-UnB-MDS?node-id=0-1&p=f&t=3mDHHLQPSOljbISN-0)  
+- [Repositório GitHub](https://github.com/unb-mds/Mural-UnB) 
 
 ## 🙋‍♂️ Equipe
 
