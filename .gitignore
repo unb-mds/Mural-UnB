@@ -1,0 +1,32 @@
+# AMBIENTE VIRTUAL
+venv/
+.env/
+.env.local
+.env.production
+
+# PYTHON
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# MKDOCS  
+site/
+.mkdocs/
+
+# SISTEMA
+.DS_Store
+Thumbs.db
+
+# LOGS
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# TEMPORÁRIOS
+*.tmp
+*.temp
