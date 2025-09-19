@@ -1,7 +1,7 @@
 ---
 name: Feature
 about: Criação de nova funcionalidade ou melhoria de valor para o usuário.
-title: ''
+title: 'Feat: <tópico da feature>'
 labels: feature
 assignees: ''
 
