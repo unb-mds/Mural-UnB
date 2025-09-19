@@ -16,7 +16,7 @@ nav:
 theme:
   name: material
   icon:
-    logo: material/calendar-text        # Ícone que representa mural/calendário
+    logo: material/calendar-text        
   palette:
     - scheme: default
       primary: light green
