@@ -1,33 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import muralLogo from './assets/Mural UnB MDS.png'
+import './styles/App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+      <div className="flex flex-col items-center justify-center">
+        <img src={muralLogo} className='w-85 h85 mt-20' alt="Mural logo" />
+
+        <h2>Ops! Ainda em Construção 🚧</h2>
+
+        <p className='p-4'>
+          Mural UnB ainda está em desenvolvimento. Enquanto isso, brinque com o botão abaixo 
         </p>
+
+        <button className="btn btn-outline btn-accent" onClick={() => setCount((count) => count + 1)}>
+          A conta é {count}
+        </button>
+
+        <p className='p-2'>
+          Para mais informações acesse <a href="https://github.com/unb-mds/2025-2-Mural-UnB" className='text-verdeMain'>nossa página do Github</a>
+        </p>
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
